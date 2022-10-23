@@ -1,4 +1,4 @@
-1. Через git show
+1. Р§РµСЂРµР· git show
 $ git show aefea
 commit aefead2207ef7e2aa5dc81a34aedf0cad4c32545
 Author: Alisdair McDiarmid <alisdair@users.noreply.github.com>
@@ -38,7 +38,7 @@ index 86d70e3e0d..588d807b17 100644
  * command/apply: Fix bug which caused Terraform to silently exit on Windows when using absolute plan path ([#25233](https://github.com/hashicorp/terraform/issues/25233))
 
  
- 2. Так же через git show, коммит принадлежит тэгу (tag: v0.12.23)
+ 2. РўР°Рє Р¶Рµ С‡РµСЂРµР· git show, РєРѕРјРјРёС‚ РїСЂРёРЅР°РґР»РµР¶РёС‚ С‚СЌРіСѓ (tag: v0.12.23)
  $ git show 85024d3
 commit 85024d3100126de36331c6982bfaac02cdab9e76 (tag: v0.12.23)
 Author: tf-release-bot <terraform@hashicorp.com>
@@ -71,7 +71,7 @@ index 33ac86f5dd..bcb6394d2e 100644
  // benefit of verifying during tests and init time that our version is a
 
  
- 3. Два коммита: 
+ 3. Р”РІР° РєРѕРјРјРёС‚Р°: 
  $ git show --pretty=format:' %P' b8d720
  56cd7859e05c36c06b56d013b55a252d0bb7e158 9ea88f22fc6269854151c571162c5bcf958bee2b
 
@@ -88,12 +88,12 @@ dd01a35078 Update CHANGELOG.md
 225466bc3e Cleanup after v0.12.23 release
 
 
-5. Выполняем поиск, где в коммитах встречается функция
+5. Р’С‹РїРѕР»РЅСЏРµРј РїРѕРёСЃРє, РіРґРµ РІ РєРѕРјРјРёС‚Р°С… РІСЃС‚СЂРµС‡Р°РµС‚СЃСЏ С„СѓРЅРєС†РёСЏ
 $ git log -S'func providerSource' --oneline
 5af1e6234a main: Honor explicit provider_installation CLI config when present
 8c928e8358 main: Consult local directories as potential mirrors of providers
 
-Дальше смотрим по хешам, где именно ее добавляли это получается коммит 8c928e8358
+Р”Р°Р»СЊС€Рµ СЃРјРѕС‚СЂРёРј РїРѕ С…РµС€Р°Рј, РіРґРµ РёРјРµРЅРЅРѕ РµРµ РґРѕР±Р°РІР»СЏР»Рё СЌС‚Рѕ РїРѕР»СѓС‡Р°РµС‚СЃСЏ РєРѕРјРјРёС‚ 8c928e8358
 $ git show 8c928e8358
 commit 8c928e83589d90a031f811fae52a81be7153e82f
 Author: Martin Atkins <mart@degeneration.co.uk>
