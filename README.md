@@ -1,4 +1,5 @@
 ---
+
 ### 1. Через git show
 $ git show aefea
     
@@ -38,9 +39,10 @@ $ git show aefea
      * command/0.13upgrade: Fix `0.13upgrade` usage help text to include options ([#25127](https://github.com/hashicorp/terraform/issues/25127))
      * command/0.13upgrade: Do not add source for builtin provider ([#25215](https://github.com/hashicorp/terraform/issues/25215))
      * command/apply: Fix bug which caused Terraform to silently exit on Windows when using absolute plan path ([#25233](https://github.com/hashicorp/terraform/issues/25233))
+ 
  ---
  
-###2. Так же через git show, коммит принадлежит тэгу (tag: v0.12.23)
+### 2. Так же через git show, коммит принадлежит тэгу (tag: v0.12.23)
  $ git show 85024d3
 
     commit 85024d3100126de36331c6982bfaac02cdab9e76 (tag: v0.12.23)
@@ -72,15 +74,17 @@ $ git show aefea
     
      // SemVer is an instance of version.Version. This has the secondary
      // benefit of verifying during tests and init time that our version is a
+
 ---
  
-###3. Два коммита: 
+### 3. Два коммита: 
  $ git show --pretty=format:' %P' b8d720
  
     56cd7859e05c36c06b56d013b55a252d0bb7e158 9ea88f22fc6269854151c571162c5bcf958bee2b
+
 ---
 
-###4. Для перечисления хешей использовал команду git log
+### 4. Для перечисления хешей использовал команду git log
 $ git log  v0.12.23..v0.12.24  --oneline
      
      33ff1c03bb (tag: v0.12.24) v0.12.24
@@ -93,9 +97,10 @@ $ git log  v0.12.23..v0.12.24  --oneline
      4b6d06cc5d Update CHANGELOG.md
      dd01a35078 Update CHANGELOG.md
      225466bc3e Cleanup after v0.12.23 release
+
 ---
 
-###5. Выполняем поиск, где в коммитах встречается функция
+### 5. Выполняем поиск, где в коммитах встречается функция
 $ git log -S'func providerSource' --oneline
 
     5af1e6234a main: Honor explicit provider_installation CLI config when present
@@ -113,7 +118,7 @@ $ git show 8c928e8358
 
 ---
 
-###6. Так же использую команду log, только добавляя аргументы для выполнение поиска по рег. выражению в определенном файле
+### 6. Так же использую команду log, только добавляя аргументы для выполнение поиска по рег. выражению в определенном файле
 $ git log -L :'func globalPluginDirs':plugins.go --oneline
 
     78b1220558 Remove config.go and update things using its aliases
@@ -158,9 +163,10 @@ $ git log -L :'func globalPluginDirs':plugins.go --oneline
             return ret
      }
     41ab0aef7a Add missing OS_ARCH dir to global plugin paths
+
 ---
 
-###7. Ищем автора командой log используя параметр -S, который позволяет по заданной строке отследить ее изменения
+### 7. Ищем автора командой log используя параметр -S, который позволяет по заданной строке отследить ее изменения
 $ git log -S'func synchronizedWriters'
 
     commit bdfea50cc85161dea41be0fe3381fd98731ff786
